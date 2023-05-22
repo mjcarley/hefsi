@@ -11,6 +11,10 @@ gchar *progname ;
 
 gint surface_sphere(gdouble u, gdouble v, gdouble *x, gpointer data)
 
+/*
+ * data is a gdouble pointer containing the sphere centre and radius
+ */
+  
 {
   gdouble *x0 = data, r ;
 
@@ -26,6 +30,10 @@ gint surface_sphere(gdouble u, gdouble v, gdouble *x, gpointer data)
 gint surface_sphere_d(gdouble u, gdouble v, gdouble *x,
 		      gdouble *xu, gdouble *xv, gpointer data)
 
+/*
+ * data is a gdouble pointer containing the sphere centre and radius
+ */
+
 {
   gdouble *x0 = data, r ;
 
@@ -35,6 +43,7 @@ gint surface_sphere_d(gdouble u, gdouble v, gdouble *x,
   x[1] = r*sin(M_PI*u)*sin(M_PI*v) + x0[1] ;
   x[2] = r*cos(M_PI*u)             + x0[2] ;
 
+  /*surface derivatives w.r.t. parameters*/
   xu[0] =  M_PI*r*cos(M_PI*u)*cos(M_PI*v) ;
   xu[1] =  M_PI*r*cos(M_PI*u)*sin(M_PI*v) ;
   xu[2] = -M_PI*r*sin(M_PI*u) ;
@@ -48,6 +57,10 @@ gint surface_sphere_d(gdouble u, gdouble v, gdouble *x,
 
 gint surface_cylinder(gdouble u, gdouble v, gdouble *x, gpointer data)
 
+/*
+ * data is a gdouble pointer containing the cylinder centre, radius
+ * and length
+ */
 {
   gdouble *x0 = data, r, len ;
 
@@ -63,6 +76,11 @@ gint surface_cylinder(gdouble u, gdouble v, gdouble *x, gpointer data)
 
 gint surface_cylinder_d(gdouble u, gdouble v, gdouble *x,
 			gdouble *xu, gdouble *xv, gpointer data)
+
+/*
+ * data is a gdouble pointer containing the cylinder centre, radius
+ * and length
+ */
 
 {
   gdouble *x0 = data, r, len ;
@@ -92,7 +110,7 @@ static void print_help_message(FILE *f, gdouble scale)
   fprintf(f,
 	  "  %s [opts] > curve.dat\n\n", progname) ;
   fprintf(f,
-	  "Options:\n\n"
+`<	  "Options:\n\n"
 	  "  -h print this message and exit\n"
 	  "  -d use derivative-free surface evaluators\n"
 	  "  -s # scaling factor for element "
