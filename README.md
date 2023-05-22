@@ -6,6 +6,13 @@ divide-and-conquer method for intersection of parametric surfaces",
 Computer Aided Geometric Design Volume 2, Issues 1-3, September 1985,
 173-183, https://doi.org/10.1016/0167-8396(85)90022-6.
 
+HEFSI includes Tomas Moller's triangle-triangle intersection code from
+A Fast Triangle-Triangle Intersection Test, Journal of Graphics Tools,
+2(2), 1997. The code and paper are available from Professor Moller's
+page:
+
+https://fileadmin.cs.lth.se/cs/Personal/Tomas_Akenine-Moller/code/
+
 * Installation
 
 HEFSI uses the glib-2.0 library for a number of utility functions and
