@@ -110,7 +110,7 @@ static void print_help_message(FILE *f, gdouble scale)
   fprintf(f,
 	  "  %s [opts] > curve.dat\n\n", progname) ;
   fprintf(f,
-`<	  "Options:\n\n"
+	  "Options:\n\n"
 	  "  -h print this message and exit\n"
 	  "  -d use derivative-free surface evaluators\n"
 	  "  -s # scaling factor for element "
