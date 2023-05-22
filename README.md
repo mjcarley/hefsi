@@ -17,21 +17,21 @@ your source code.
 To run the sample calculation, for the intersection of a sphere and a
 cylinder, run
 
-./itest > curve.dat
+> ./itest > curve.dat
 
 This will output two files of the triangulations of the surfaces,
 which can be read in Octave using the readtri function supplied, and
 visualized using Octave's built-in trisurf function:
 
->> [x1,t1]=readtri("surface1.dat") ;
->> trisurf(t1(:,1:3)+1, x1(:,1), x1(:,2), x1(:,3))
->> [x2,t2]=readtri("surface2.dat") ;
->> trisurf(t2(:,1:3)+1, x2(:,1), x2(:,2), x2(:,3))
+> [x1,t1]=readtri("surface1.dat") ;
+> trisurf(t1(:,1:3)+1, x1(:,1), x1(:,2), x1(:,3))
+> [x2,t2]=readtri("surface2.dat") ;
+> trisurf(t2(:,1:3)+1, x2(:,1), x2(:,2), x2(:,3))
 
 The intersection curve is written as a connected sequence of
 intersection points, one per line:
 
-xi yi zi u1i v1i u2i v2i inter
+> xi yi zi u1i v1i u2i v2i inter
 
 where (xi,yi,zi) is the ith intersection point, (u1i,v1i) are the
 parametric coordinates of the point on surface 1, (u2i,v2i) are the
@@ -42,6 +42,6 @@ intersection between the surfaces).
 There are some command line options for the test code, which are
 listed by the help option
 
-  ./itest -h
+>  ./itest -h
 
 
